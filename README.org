@@ -1,0 +1,33 @@
+#+TITLE: daybreak-serializer-msgpack
+#+LATEX: \pagebreak
+
+* Overview
+
+  =daybreak-serializer-msgpack= adds a =Daybreak::Serializer::MsgPack= class.
+  Unsurprisingly, this class can be used as a serializer for Daybreak, using
+  =MessagePack= instead of the default =Marshal=.
+
+* Installation
+
+  #+BEGIN_SRC shell
+    gem install daybreak-serializer-msgpack
+  #+END_SRC
+
+* Usage
+
+  #+BEGIN_SRC ruby
+    require 'daybreak/serializer/msgpack'
+
+    db = Daybreak::DB.new 'daybreak.db', serializer: Daybreak::Serializer::MsgPack
+
+    db['key'] = 'value'
+  #+END_SRC
+
+* License
+
+  ~daybreak-serializer-msgpack~ is available under the [[https://tldrlegal.com/license/mit-license][MIT License]]. See
+  ~LICENSE.txt~ for the full text.
+
+* Contributors
+
+  - [[https://colstrom.github.io/][Chris Olstrom]] | [[mailto:chris@olstrom.com][e-mail]] | [[https://twitter.com/ChrisOlstrom][Twitter]]
